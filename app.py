@@ -13,7 +13,7 @@ import cv2 as cv
 
 
 app = Flask(__name__)
-model = load_model('models/model_all.h5')
+model = load_model('models/model_cnn.h5')
 graph = tf.get_default_graph()
 
 
@@ -31,8 +31,11 @@ def prediction():
 
         #resize the input image for prediction
         test_image = cv.resize(test_image, (32, 32))
+
         datas.append(test_image.flatten())
-        X_test = np.array(datas)
+
+        #for convolution input needs to be 4D
+        X_test = np.array(datas).reshape(-1,32,32,1)
         X_test /= 255
 
         with graph.as_default():
