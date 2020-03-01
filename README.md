@@ -5,8 +5,10 @@ This is Nepali handwritten characters classification project with simple API.The
 ```
 python app.py
 ```
- Then open server in **localhost:5000**
+ Then open server in **localhost:5000**. You can draw nepali characters in the black board using mouse.
 
 ## sample output
+The image shows predicted output with confidence score that it belongs to that class(out of 46 classes)
+
 ![project_handwritten](https://user-images.githubusercontent.com/16822926/75625155-84169e00-5be3-11ea-889f-0d140c069f95.png)
- The image shows predicted output with confidence score that it belongs to that class.
+ 
